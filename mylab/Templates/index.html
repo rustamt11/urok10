@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>АНКЕТЫ</title>
+</head>
+<body>
+    <div style="margin: auto;
+    margin-top: 100px;
+    width: 300px;">
+        {% for profile in profiles %}
+        <div style="border: 3px solid black;
+margin-bottom:10px;
+text-align: center;">
+            <p>{{ profile }}</p>
+            <p>{{ profile.age }}</p>
+            <p>{{ profile.salary }}</p>
+            <p>
+                <a href="{{ profile.get_absolute_url }}" style="background-color: green;
+color: white">
+                    Перейти к профилю
+                </a>
+            </p>
+
+             </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
